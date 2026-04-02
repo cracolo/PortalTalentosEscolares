@@ -1,0 +1,37 @@
+/* Estilos específicos para páginas de categoría */
+
+.talents-list {
+    margin-bottom: 30px;
+}
+
+.talents-list h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.talents-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.talents-list li {
+    margin: 15px 0;
+}
+
+.talents-list a {
+    display: block;
+    background: #f3f4f6;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1.1em;
+}
+
+.talents-list a:hover {
+    background: #667eea;
+    color: white;
+    transform: translateX(5px);
+}

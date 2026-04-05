@@ -4,7 +4,18 @@
     
 }
 
-h2 {
+.description h2{
+    color: #667eea;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.8em;
+}
+
+.description p{
+    font-size: 1.5em;
+}
+
+.team h2 {
     color: #667eea;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -13,9 +24,7 @@ h2 {
 
 .team ul {
     list-style:none;
-    padding-left: 0;
-    align-items: center; 
-}
+    }
 
 .team li {
     background: #f3f4f6;
@@ -36,6 +45,19 @@ h2 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+.image-section h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.8em;
+}
+
+.categories h2{
+    color: #667eea;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.8em;
+}
 .category-links {
     display: flex;
     gap: 20px;

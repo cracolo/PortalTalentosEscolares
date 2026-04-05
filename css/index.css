@@ -26,13 +26,20 @@
     list-style:none;
     }
 
-.team li {
+.team a {
+    display: block;
     background: #f3f4f6;
-    margin: 10px;
-    padding: 12px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
     border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
     font-size: 1.1em;
-    width: 300px;
+}
+.team a:hover {
+    background: #667eea;
+    color: white;
+    transform: translateX(5px);
 }
 
 .main-image {

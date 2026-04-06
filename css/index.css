@@ -1,29 +1,32 @@
 .description, .team, .image-section, .categories {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
     
 }
 
 .description h2{
     color: #667eea;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-top: 5px;
     font-size: 1.8em;
 }
 
 .description p{
-    font-size: 1.5em;
-}
+    font-size: 1.2em;
+    }
 
 .team h2 {
     color: #667eea;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 60px;
     font-size: 1.8em;
 }
 
 .team ul {
     list-style:none;
+    margin: 250px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     }
 
 .team a {
@@ -35,6 +38,7 @@
     border-radius: 8px;
     transition: background 0.3s, transform 0.3s;
     font-size: 1.1em;
+    margin-bottom: 5px;
 }
 .team a:hover {
     background: #667eea;
@@ -61,8 +65,8 @@
 
 .categories h2{
     color: #667eea;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
     font-size: 1.8em;
 }
 .category-links {

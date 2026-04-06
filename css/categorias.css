@@ -11,11 +11,15 @@
 .talents-list ul {
     list-style: none;
     padding-left: 0;
+    margin: 250px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .talents-list li {
     margin: 15px 0;
-}
+    
+    }
 
 .talents-list a {
     display: block;
@@ -26,6 +30,7 @@
     border-radius: 8px;
     transition: background 0.3s, transform 0.3s;
     font-size: 1.1em;
+    margin-bottom: 5px;
 }
 
 .talents-list a:hover {

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cristian Brevis">
+    <meta name="description" content="Portal Talentos Escolares">
+    <meta name="title" content="Tecnología-Talentos Escolares">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/categorias.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌟</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contacto</h1>
+            <p>Ingresa tus datos:</p>
+        </header>   
+
+       <form action="procesar.php" method="GET" enctype="" name="formulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="INgresa tu Nombre"> <br><br>
+        <label for="mail">email</label>
+        <input type="mail" id="mail" name="mail" required placeholder="Ingresa tu correo" required><br><br>
+        <label for="fono">Teléfono</label>
+        <input type="fono" id="fono" name="fono" required placeholder="Ingresa tu Teléfono" required><br><br>
+        <label for="nombre">¿Cual es tu Talento?</label>
+        <select name="Talentos">
+        <option value="1"> Cuerdas</opinión>
+        <option value="2"> Viento</opinión>
+        <option value="3"> Percusiíon</opinión> 
+        <option value="4"> Tecnología</opinión>  
+                    </select>
+                    <br>
+        <label for="comentario">Agrega tu comentario</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="danos tu opinión" required></textarea><br><br>
+        <input type="submit" value="Enviar     "><input type="reset" value="        Limpiar">
+        </form>
+        
+           
+
+            <div class="back-link">
+                <a href="/index.html" class="back-btn">← Volver al Inicio</a>
+            </div>
+        
+
+        <footer>
+            <p>&copy;2026 Portal de Talentos Escolares - Todos los derechos reservados por mi</p>
+        </footer>
+    </div>
+</body>
+</html>

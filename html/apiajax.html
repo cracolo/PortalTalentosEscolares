@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/users/1",
+                method: "GET",
+                success: function (data) {
+                    $("#resultado").html(
+                        "<h3>" + data.name + "</h3>" +
+                        "<p>" + data.email + "</p>"
+
+                    );
+                }
+            });
+        });
+    });
+   </script>
+</head>
+<body>
+    
+   <button id="btn">Enviar</button>
+   <div id="resultado"></div>
+   
+</body>
+</html>

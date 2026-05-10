@@ -11,7 +11,15 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌟</text></svg>">
-</head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("btncambiar").onclick(function(){
+        $("bienvenida").text("De Talentos Escolares");
+      });
+    });
+    </script>
+  </head>
 <body>
     <div class="container">
         <header>
@@ -21,7 +29,11 @@
 
         <main>
             <section class="description">
-                <h2>Bienvenidos al Portal</h2>
+                <h2 id="bienvenida">Bienvenidos al Portal</h2>
+                <button id="btncambiar">Presioname!</button>
+                
+
+
                 <p>Este espacio está dedicado a reconocer y compartir los increíbles talentos que poseen nuestros estudiantes.</p> <p>Desde Música hasta Tecnología, aquí encontrarás jóvenes brillantes con habilidades únicas. (Mejor que los X-men)</p>
             </section>
             
@@ -82,5 +94,6 @@
             <p> &copy;2026! Portal de Talentos Escolares - Todos los derechos reservados por mi</p>
         </footer>
     </div>
+      
 </body>
 </html>

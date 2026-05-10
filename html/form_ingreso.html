@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cristian Brevis">
+    <meta name="description" content="Formulario de registro de talentos - Portal de Talentos Escolares">
+    <meta name="title" content="Registro de Talentos | Portal de Talentos Escolares">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="/css/form_ingreso.css">
+</head>
+<body>
+    <div class="container-fluid px-0">
+        <!-- Header -->
+        <header class="header-gradient text-white py-5">
+            <div class="container text-center">
+                <h1 class="display-4 fw-bold">
+                    <i class="fas fa-star-of-life"></i> Registra tu Talento
+                </h1>
+                <p class="lead">Comparte tu habilidad única y forma parte de nuestra comunidad</p>
+            </div>
+        </header>
+
+        <main class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <!-- Tarjeta del formulario -->
+                    <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                        <div class="card-header bg-gradient text-white py-4">
+                            <h2 class="text-center mb-0 fw-bold">
+                                <i class="fas fa-pen-alt me-2"></i>Formulario de Registro
+                            </h2>
+                            <p class="text-center mb-0 mt-2 opacity-75">Completa todos los campos para registrar tu talento</p>
+                        </div>
+                        
+                        <div class="card-body p-4 p-lg-5">
+                            <!-- Formulario -->
+                            <form id="formTalento">
+                                <!-- Nombre y Apellidos -->
+                                <div class="mb-4">
+                                    <label for="nombre" class="form-label fw-semibold">
+                                        <i class="fas fa-user me-2 text-primary"></i>Nombre y Apellidos *
+                                    </label>
+                                    <input type="text" class="form-control form-control-lg" id="nombre" 
+                                           placeholder="Ej: Ana María Pérez González">
+                                    <div class="error-message" id="error-nombre"></div>
+                                </div>
+
+                                <!-- Dirección -->
+                                <div class="mb-4">
+                                    <label for="direccion" class="form-label fw-semibold">
+                                        <i class="fas fa-location-dot me-2 text-primary"></i>Dirección *
+                                    </label>
+                                    <input type="text" class="form-control form-control-lg" id="direccion" 
+                                           placeholder="Ej: Av. Los Talentos 123, Santiago">
+                                    <div class="error-message" id="error-direccion"></div>
+                                </div>
+
+                                <!-- Teléfono -->
+                                <div class="mb-4">
+                                    <label for="telefono" class="form-label fw-semibold">
+                                        <i class="fas fa-phone me-2 text-primary"></i>Teléfono *
+                                    </label>
+                                    <input type="tel" class="form-control form-control-lg" id="telefono" 
+                                           placeholder="Ej: +56 9 1234 5678">
+                                    <div class="error-message" id="error-telefono"></div>
+                                </div>
+
+                                <!-- E-mail -->
+                                <div class="mb-4">
+                                    <label for="email" class="form-label fw-semibold">
+                                        <i class="fas fa-envelope me-2 text-primary"></i>Correo Electrónico *
+                                    </label>
+                                    <input type="email" class="form-control form-control-lg" id="email" 
+                                           placeholder="Ej: ana.perez@ejemplo.com">
+                                    <div class="error-message" id="error-email"></div>
+                                </div>
+
+                                <!-- Género -->
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold">
+                                        <i class="fas fa-venus-mars me-2 text-primary"></i>Género *
+                                    </label>
+                                    <div class="d-flex gap-4 mt-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="genero" id="femenino" value="femenino">
+                                            <label class="form-check-label" for="femenino">
+                                                <i class="fas fa-female text-pink"></i> Femenino
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino">
+                                            <label class="form-check-label" for="masculino">
+                                                <i class="fas fa-male text-blue"></i> Masculino
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="genero" id="otro" value="otro">
+                                            <label class="form-check-label" for="otro">
+                                                <i class="fas fa-genderless"></i> Otro
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="error-message" id="error-genero"></div>
+                                </div>
+
+                                <!-- Talento (Menú desplegable) -->
+                                <div class="mb-4">
+                                    <label for="talento" class="form-label fw-semibold">
+                                        <i class="fas fa-music me-2 text-primary"></i>Talento *
+                                    </label>
+                                    <select class="form-select form-select-lg" id="talento">
+                                        <option value="">Selecciona tu talento</option>
+                                        <option value="musica">🎵 Música</option>
+                                        <option value="tecnologia">💻 Tecnología</option>
+                                        <option value="arte">🎨 Arte</option>
+                                        <option value="deporte">⚽ Deporte</option>
+                                        <option value="baile">💃 Baile y Danza</option>
+                                        <option value="cocina">🍳 Cocina</option>
+                                        <option value="escritura">📝 Escritura</option>
+                                        <option value="otro_talento">✨ Otro talento</option>
+                                    </select>
+                                    <div class="error-message" id="error-talento"></div>
+                                </div>
+
+                                <!-- Cuéntanos de tu talento -->
+                                <div class="mb-4">
+                                    <label for="descripcion" class="form-label fw-semibold">
+                                        <i class="fas fa-comment-dots me-2 text-primary"></i>Cuéntanos de tu talento *
+                                    </label>
+                                    <textarea class="form-control" id="descripcion" rows="5" 
+                                              placeholder="Describe tu talento, experiencia, logros o por qué te apasiona..."></textarea>
+                                    <div class="form-text text-muted">Mínimo 20 caracteres, máximo 500 caracteres</div>
+                                    <div class="error-message" id="error-descripcion"></div>
+                                </div>
+
+                                <!-- Botones -->
+                                <div class="d-flex gap-3 mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg flex-grow-1">
+                                        <i class="fas fa-paper-plane me-2"></i>Enviar Registro
+                                    </button>
+                                    <button type="reset" class="btn btn-outline-secondary btn-lg" id="btnReset">
+                                        <i class="fas fa-eraser me-2"></i>Limpiar
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- Mensaje de éxito -->
+                            <div id="mensajeExito" class="alert alert-success mt-4" style="display: none;">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle fa-2x me-3"></i>
+                                    <div>
+                                        <h5 class="mb-1">¡Datos enviados correctamente!</h5>
+                                        <p class="mb-0">Hemos recibido tu registro de talento. Pronto nos pondremos en contacto contigo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón volver al inicio -->
+                    <div class="text-center mt-4">
+                        <a href="/index.html" class="btn btn-link text-decoration-none">
+                            <i class="fas fa-arrow-left me-2"></i>Volver al Inicio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer-gradient text-white py-4 mt-5">
+            <div class="container text-center">
+                <p class="mb-0">&copy; 2026 Portal de Talentos Escolares - Descubre y celebra los talentos de nuestros estudiantes</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript Personalizado -->
+    <script src="/js/form_ingreso.js"></script>
+</body>
+</html>

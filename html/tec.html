@@ -3,59 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Cristian Brevis">
-    <meta name="description" content="Portal Talentos Escolares">
-    <meta name="title" content="Tecnología-Talentos Escolares">
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/categorias.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌟</text></svg>">
+    <meta name="description" content="Descubre los talentos tecnológicos de nuestros estudiantes - Portal de Talentos Escolares">
+    <meta name="title" content="Tecnología | Portal de Talentos Escolares">
+    
+    <title>Tecnología | Portal de Talentos Escolares</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS Personalizados -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/categorias.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Tecno Talentos</h1>
-            <p>Estudiantes apasionados por la tecnología</p>
-        </header>   
 
-        <main>
-            <section class="image-strip">
-                <div class="strip-container">
-                    <a href="/img/tecnologia/talentos/estudiantes-tec1.png" target="_blank">
-                        <img src="/img/tecnologia/talentos/estudiantes-tec1.png" alt="Armando Robots" class="strip-img" width="237" height="133">
-                    </a>
-                    <a href="/img/tecnologia/talentos/escolares-tec2.jpg" target="_blank">
-                        <img src="/img/tecnologia/talentos/escolares-tec2.jpg" alt="Robots" class="strip-img" width="237" height="133">
-                    </a>
-                    <a href="/img/tecnologia/talentos/escolares-tec3.jpg" target="_blank">
-                        <img src="/img/tecnologia/talentos/escolares-tec3.jpg" alt="Diseño Tec" class="strip-img" width="237" height="133">
-                    </a>
-                    <a href="/img/tecnologia/talentos/estudiantes-tec4.png" target="_blank">
-                        <img src="/img/tecnologia/talentos/estudiantes-tec4.png" alt="Realidad Virtual" class="strip-img" width="237" height="133">
-                    </a>
-                    <a href="/img/tecnologia/talentos/robots.jpg" target="_blank">
-                        <img src="/img/tecnologia/talentos/robots.jpg" alt="Programación robótica" class="strip-img" width="237" height="133">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-star-of-life me-2"></i>Portal Talentos
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="fas fa-home me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">
+                            <i class="fas fa-users me-1"></i>Nosotros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html" target="_blank">
+                            <i class="fas fa-envelope me-1"></i>Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section de la Categoría -->
+    <section class="category-hero">
+        <div class="container">
+            <div class="row min-vh-50 align-items-center">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <div class="hero-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h1 class="display-3 fw-bold mb-4">💻 Tecno Talentos</h1>
+                    <p class="lead mb-4">Estudiantes apasionados por la tecnología, la robótica y la innovación</p>
+                    <div class="hero-badges">
+                        <span class="badge bg-light text-dark mx-1"><i class="fas fa-users me-1"></i> 12+ Talentos</span>
+                        <span class="badge bg-light text-dark mx-1"><i class="fas fa-microchip me-1"></i> 5 Especialidades</span>
+                        <span class="badge bg-light text-dark mx-1"><i class="fas fa-trophy me-1"></i> 8 Competencias</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <main>
+        <!-- Tira de Imágenes (Miniaturas) -->
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <div class="section-header text-center mb-4" data-aos="fade-up">
+                        <div class="section-badge d-inline-block">★ Galería</div>
+                        <h2 class="display-5 fw-bold mt-3">Innovación y Creatividad</h2>
+                        <p class="lead">Proyectos tecnológicos desarrollados por nuestros estudiantes</p>
+                    </div>
+                    
+                    <div class="image-strip-card" data-aos="fade-up">
+                        <div class="strip-container">
+                            <a href="/img/tecnologia/talentos/estudiantes-tec1.png" target="_blank" class="strip-link">
+                                <img src="/img/tecnologia/talentos/estudiantes-tec1.png" alt="Armando Robots" class="strip-img">
+                                <span class="strip-caption">Construcción de Robots</span>
+                            </a>
+                            <a href="/img/tecnologia/talentos/escolares-tec2.jpg" target="_blank" class="strip-link">
+                                <img src="/img/tecnologia/talentos/escolares-tec2.jpg" alt="Robots" class="strip-img">
+                                <span class="strip-caption">Robots en acción</span>
+                            </a>
+                            <a href="/img/tecnologia/talentos/escolares-tec3.jpg" target="_blank" class="strip-link">
+                                <img src="/img/tecnologia/talentos/escolares-tec3.jpg" alt="Diseño Tec" class="strip-img">
+                                <span class="strip-caption">Diseño y Creatividad</span>
+                            </a>
+                            <a href="/img/tecnologia/talentos/estudiantes-tec4.png" target="_blank" class="strip-link">
+                                <img src="/img/tecnologia/talentos/estudiantes-tec4.png" alt="Realidad Virtual" class="strip-img">
+                                <span class="strip-caption">Realidad Virtual</span>
+                            </a>
+                            <a href="/img/tecnologia/talentos/robots.jpg" target="_blank" class="strip-link">
+                                <img src="/img/tecnologia/talentos/robots.jpg" alt="Programación robótica" class="strip-img">
+                                <span class="strip-caption">Programación Robótica</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de Talentos Tecnológicos -->
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-header text-center mb-4" data-aos="fade-up">
+                        <div class="section-badge d-inline-block">★ Destacados</div>
+                        <h2 class="display-5 fw-bold mt-3">Talentos en Tecnología</h2>
+                        <p class="lead">Conoce a nuestros innovadores estudiantes tecnológicos</p>
+                    </div>
+                    
+                    <div class="talents-container" data-aos="fade-up">
+                        <div class="talent-card">
+                            <div class="talent-avatar">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <div class="talent-info">
+                                <h3>Juanin Juan Harry</h3>
+                                <p class="talent-specialty"><i class="fas fa-bolt"></i> Electrónica</p>
+                                <p class="talent-description">Especialista en circuitos electrónicos y prototipado rápido. Ha desarrollado 5 proyectos de automatización para el hogar y participado en ferias científicas nacionales.</p>
+                                <a href="/html/juanin.html" class="talent-link" target="_blank">Ver perfil completo →</a>
+                            </div>
+                        </div>
+                        
+                        <div class="talent-card">
+                            <div class="talent-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="talent-info">
+                                <h3>Jaime Jaimoso</h3>
+                                <p class="talent-specialty"><i class="fas fa-cogs"></i> Robótica</p>
+                                <p class="talent-description">Constructor de robots autónomos. Ha ganado 2 competencias regionales de robótica y lidera el club de robótica de su colegio.</p>
+                                <a href="#" class="talent-link">Ver perfil completo →</a>
+                            </div>
+                        </div>
+                        
+                        <div class="talent-card">
+                            <div class="talent-avatar">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="talent-info">
+                                <h3>Ruben Blades</h3>
+                                <p class="talent-specialty"><i class="fab fa-python"></i> Programación</p>
+                                <p class="talent-description">Desarrollador full-stack en formación. Ha creado 3 aplicaciones web educativas y contribuye a proyectos open-source.</p>
+                                <a href="#" class="talent-link">Ver perfil completo →</a>
+                            </div>
+                        </div>
+
+                        <div class="talent-card">
+                            <div class="talent-avatar">
+                                <i class="fas fa-vr-cardboard"></i>
+                            </div>
+                            <div class="talent-info">
+                                <h3>Camila Reyes</h3>
+                                <p class="talent-specialty"><i class="fas fa-cube"></i> Realidad Virtual</p>
+                                <p class="talent-description">Creadora de experiencias inmersivas en VR. Ha desarrollado un simulador educativo para enseñar historia.</p>
+                                <a href="#" class="talent-link">Ver perfil completo →</a>
+                            </div>
+                        </div>
+
+                        <div class="talent-card">
+                            <div class="talent-avatar">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="talent-info">
+                                <h3>Diego Fuentes</h3>
+                                <p class="talent-specialty"><i class="fas fa-lock"></i> Ciberseguridad</p>
+                                <p class="talent-description">Especialista en seguridad informática. Ha identificado vulnerabilidades en plataformas escolares y promueve el uso seguro de Internet.</p>
+                                <a href="#" class="talent-link">Ver perfil completo →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Próximos Eventos Tecnológicos -->
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="events-card" data-aos="fade-up">
+                        <div class="events-header">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h3>Próximos Eventos Tecnológicos</h3>
+                        </div>
+                        <div class="events-list">
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="day">18</span>
+                                    <span class="month">NOV</span>
+                                </div>
+                                <div class="event-info">
+                                    <h4>Hackathon Escolar 2026</h4>
+                                    <p>Competencia de programación y desarrollo de soluciones tecnológicas</p>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="day">05</span>
+                                    <span class="month">DIC</span>
+                                </div>
+                                <div class="event-info">
+                                    <h4>Feria de Robótica</h4>
+                                    <p>Exhibición de robots construidos por estudiantes</p>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="day">20</span>
+                                    <span class="month">ENE</span>
+                                </div>
+                                <div class="event-info">
+                                    <h4>Taller de Inteligencia Artificial</h4>
+                                    <p>Introducción a IA y machine learning para jóvenes</p>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="day">12</span>
+                                    <span class="month">MAR</span>
+                                </div>
+                                <div class="event-info">
+                                    <h4>Competencia de Apps</h4>
+                                    <p>Desarrollo de aplicaciones móviles con impacto social</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón Volver al Inicio -->
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <a href="../index.html" class="btn-back-home">
+                        <i class="fas fa-arrow-left me-2"></i>Volver al Inicio
                     </a>
                 </div>
-            </section>
-            <section class="talents-list">
-                <h2>Lista de Talentos EN Tecnología</h2>
-                <ul>
-                    <li><a href="/html/tecnologia/talentos/Electronica.html" target="_blank">Juanin Juan Harry - Electrónica</a></li>
-                    <li><a href="#" target="_blank">Jaime jaimoso - Robótica</a></li>
-                    <li><a href="#" target="_blank">Ruben Blades - Programación</a></li>
-                </ul>
-            </section>
-
-            <div class="back-link">
-                <a href="/index.html" class="back-btn">← Volver al Inicio</a>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer>
-            <p>&copy;2026 Portal de Talentos Escolares - Todos los derechos reservados por mi</p>
-        </footer>
-    </div>
+    <!-- Footer -->
+    <footer class="footer-gradient text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2026 Portal de Talentos Escolares - Creado por Cristian Brevis</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Descubre, celebra y potencia los talentos de nuestros estudiantes</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Navbar scroll effect
+        $(document).ready(function() {
+            $(window).on('scroll', function() {
+                if ($(window).scrollTop() > 50) {
+                    $('.navbar').css('padding', '0.5rem 0');
+                } else {
+                    $('.navbar').css('padding', '1rem 0');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

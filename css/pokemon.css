@@ -1,0 +1,310 @@
+/* ============================================
+   PORTAL DE TALENTOS ESCOLARES
+   Página Talentos Pokémon - Estilos específicos
+   ============================================ */
+
+/* Hero Section */
+.pokemon-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    margin-top: 56px;
+}
+
+.hero-icon i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.pokemon-hero .hero-badges .badge {
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+.hero-wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+/* Trainer Cards */
+.trainer-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.trainer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(102,126,234,0.15);
+}
+
+.trainer-header {
+    background: linear-gradient(135deg, #667eea20, #764ba220);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.trainer-avatar i {
+    font-size: 3.5rem;
+    color: #667eea;
+}
+
+.trainer-header h3 {
+    margin: 10px 0 5px;
+    font-weight: 600;
+}
+
+.trainer-badge {
+    font-size: 0.8rem;
+    color: #667eea;
+    font-weight: 500;
+}
+
+.pokemon-list {
+    padding: 20px;
+}
+
+.pokemon-list h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.pokemon-list h4 i {
+    color: #667eea;
+    margin-right: 5px;
+}
+
+.pokemon-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pokemon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.pokemon-btn i {
+    font-size: 1.1rem;
+}
+
+.pokemon-btn:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    transform: translateX(5px);
+}
+
+/* Modal de Pokémon */
+.modal-content {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.pokemon-info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pokemon-info-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pokemon-sprite {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+.pokemon-sprite img {
+    width: 120px;
+    height: 120px;
+}
+
+.pokemon-stats {
+    flex: 1;
+}
+
+.pokemon-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.pokemon-types {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.type-badge {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* Colores de tipos Pokémon */
+.type-normal { background: #A8A878; color: white; }
+.type-fire { background: #F08030; color: white; }
+.type-water { background: #6890F0; color: white; }
+.type-electric { background: #F8D030; color: #333; }
+.type-grass { background: #78C850; color: white; }
+.type-ice { background: #98D8D8; color: #333; }
+.type-fighting { background: #C03028; color: white; }
+.type-poison { background: #A040A0; color: white; }
+.type-ground { background: #E0C068; color: #333; }
+.type-flying { background: #A890F0; color: white; }
+.type-psychic { background: #F85888; color: white; }
+.type-bug { background: #A8B820; color: white; }
+.type-rock { background: #B8A038; color: white; }
+.type-ghost { background: #705898; color: white; }
+.type-dragon { background: #7038F8; color: white; }
+.type-dark { background: #705848; color: white; }
+.type-steel { background: #B8B8D0; color: #333; }
+.type-fairy { background: #EE99AC; color: #333; }
+
+.stats-grid {
+    margin-top: 20px;
+}
+
+.stat-item {
+    margin-bottom: 12px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.stat-bar {
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 8px;
+}
+
+.stat-fill {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.stat-value {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 3px;
+}
+
+.pokemon-abilities {
+    margin-top: 20px;
+}
+
+.pokemon-abilities h5 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.ability-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ability-badge {
+    background: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
+
+/* Botón Volver al Inicio */
+.btn-back-home {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-back-home:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102,126,234,0.4);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pokemon-hero {
+        min-height: 50vh;
+    }
+    
+    .pokemon-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .pokemon-info-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .pokemon-types {
+        justify-content: center;
+    }
+    
+    .btn-back-home {
+        width: 100%;
+        justify-content: center;
+    }
+}

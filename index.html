@@ -49,7 +49,7 @@
                         <a class="nav-link" href="html/nosotros.html"><i class="fas fa-users me-1"></i>Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="html/contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a>
+                        <a class="nav-link" href="html/contacto.html" target="_blank"><i class="fas fa-envelope me-1"></i>Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -93,7 +93,6 @@
             </div>
         </div>
 
-        <!-- Carrusel -->
        <!-- Carrusel -->
 <div class="container my-5">
     <div class="row justify-content-center">
@@ -165,6 +164,11 @@
                             <h3>Baile y Danza</h3>
                             <p>Ritmos latinos, ballet y contemporáneo</p>
                         </a>
+                        <a href="html/pokemon.html" class="category-card">
+                            <i class="fas fa-paw"></i>
+                            <h3>Maestro Pokemon</h3>
+                            <p>Nuestros Estudiantes tambien son Poke-expertos </p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -226,13 +230,13 @@
                         <a href="#" class="action-btn">
                             <i class="fas fa-map-marker-alt"></i> ¿Dónde estamos?
                         </a>
-                        <a href="html/form_ingreso.html" class="action-btn">
+                        <a href="html/form_ingreso.html" target="_blank" class="action-btn">
                             <i class="fas fa-pen-alt"></i> Inscríbete
                         </a>
                         <a href="html/nosotros.html" class="action-btn">
                             <i class="fas fa-users"></i> Quiénes somos
                         </a>
-                        <a href="html/contacto.html" class="action-btn">
+                        <a href="html/contacto.html" target="_blank" class="action-btn">
                             <i class="fas fa-envelope"></i> Contáctanos
                         </a>
                     </div>
@@ -241,7 +245,6 @@
         </div>
     </main>
 
-    <!-- Footer (mismo estilo que página Quiénes Somos) -->
     <footer class="footer-gradient text-white py-4">
         <div class="container">
             <div class="row">
@@ -255,7 +258,6 @@
         </div>
     </footer>
 
-    <!-- Script personalizado -->
     <script>
         $(document).ready(function() {
             // Navbar scroll effect
@@ -274,7 +276,7 @@
     </script>
     <script>
     $(document).ready(function() {
-        // Inicializar carrusel manualmente
+        // Inicializar carrusel 
         var myCarousel = document.getElementById('carouselExampleIndicators');
         if (myCarousel) {
             var carousel = new bootstrap.Carousel(myCarousel, {
@@ -283,7 +285,7 @@
                 wrap: true
             });
             
-            // Debug: verificar que los botones funcionan
+            // verificar que los botones funcionan
             $('.carousel-control-prev').click(function() {
                 console.log('Botón anterior clickeado');
                 carousel.prev();

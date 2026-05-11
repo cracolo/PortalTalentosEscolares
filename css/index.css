@@ -4,11 +4,11 @@
     
 }
 
-.description h2{
+.description h1{
     color: #667eea;
     margin-bottom: 30px;
     margin-top: 5px;
-    font-size: 1.8em;
+    font-size: 3.8em;
 }
 
 .description p{
@@ -71,7 +71,7 @@
 }
 .category-links {
     display: flex;
-    gap: 20px;
+    gap: 89px;
     margin-top: 15px;
     flex-wrap: wrap;
     

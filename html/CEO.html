@@ -3,38 +3,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cristian Brevis - Ficha Personal</title>
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/ficha.css">
+    <meta name="author" content="Cristian Brevis">
+    <meta name="description" content="Conoce a Cristian Brevis, fundador y CEO del Portal de Talentos Escolares">
+    <meta name="title" content="Cristian Brevis - CEO | Portal de Talentos Escolares">
+    
+    <title>Cristian Brevis - CEO | Portal de Talentos Escolares</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/ceo.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌟</text></svg>">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Cristian Brevis</h1>
-            <p>CEO Talentos Escolares</p>
-        </header>
 
-        <main>
-            <div style="text-align: center; margin-bottom: 30px;">
-                <img src="html/equipo/imagenes/CEO.jpeg" alt="CEO Cristian Brevis" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid #667eea;">
-            </div>
-            <section style="margin-bottom: 30px;">
-            <p>Cristian es un Profesional de la Informática dedicado a la enseñanza en el uso de la tecnología al servicio de los mas jóvenes</p>
-            </section>
-            <section style="margin-bottom: 30px;">
-                <ul>
-                    <li><b>Nombre: </b>Cristian Brevis Vallejos</li>
-                    <li><b>Edad: </b>45</li>
-                    <li><b>Talento: </b>Soporte, administracion y monitoreo de CLuster de servidores.</li>
-                    <li><b>Participaciones: </b>APEC 2019 Puerto Varas, APEC 2020 Santiago</li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-star-of-life me-2"></i>Portal Talentos
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="fas fa-home me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">
+                            <i class="fas fa-users me-1"></i>Nosotros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">
+                            <i class="fas fa-envelope me-1"></i>Contacto
+                        </a>
+                    </li>
                 </ul>
-            </section>
-      
-        </main>
+            </div>
+        </div>
+    </nav>
 
-        <footer>
-            <p>&copy;2026 Portal de Talentos Escolares</p>
-        </footer>
-    </div>
+    <!-- Hero Section - Perfil CEO -->
+    <section class="ceo-hero">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="ceo-image-container">
+                        <img src="/img/index/CEO.jpeg" alt="Cristian Brevis - CEO" class="ceo-principal-img">
+                        <div class="ceo-badge-principal">
+                            <i class="fas fa-crown"></i> Fundador & CEO
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="ceo-titles">
+                        <h1 class="display-3 fw-bold mb-3">Cristian Brevis</h1>
+                        <h2 class="h3 text-primary mb-4">Fundador & Director Ejecutivo</h2>
+                        <div class="ceo-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p class="lead">"Creo que cada estudiante tiene un talento único esperando ser descubierto. Mi misión es crear un espacio donde esos talentos brillen."</p>
+                        </div>
+                        <div class="ceo-contact-info mt-4">
+                            <a href="mailto:cristian.brevis@talentosescolares.cl"><i class="fas fa-envelope"></i> cristian.brevis@talentosescolares.cl</a>
+                            <a href="https://www.linkedin.com/in/cristian-brevis" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Biografía -->
+    <section class="bio-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-header text-center mb-5" data-aos="fade-up">
+                        <div class="section-badge d-inline-block">★ Biografía</div>
+                        <h2 class="display-5 fw-bold mt-3">Trayectoria y Visión</h2>
+                        <p class="lead">Conoce la historia detrás del fundador</p>
+                    </div>
+                    <div class="bio-content" data-aos="fade-up">
+                        <p class="lead mb-4">Cristian Brevis es un <strong class="text-primary">educador, emprendedor y visionario chileno</strong> con más de 10 años de experiencia en el ámbito educativo.</p>
+                        <p class="mb-4">Antes de fundar el Portal de Talentos Escolares, Cristian trabajó como profesor de tecnología en diversas instituciones educativas de la Región Metropolitana. Fue durante esos años en el aula donde identificó una necesidad crucial: <strong>muchos estudiantes tenían habilidades extraordinarias que pasaban completamente desapercibidas en el sistema educativo tradicional.</strong></p>
+                        <p class="mb-4">Frustrado por ver cómo el talento de sus estudiantes se desperdiciaba por falta de visibilidad y oportunidades, Cristian decidió tomar cartas en el asunto. En 2022, con ahorros personales y una computadora, fundó el Portal de Talentos Escolares desde su propia casa.</p>
+                        <p class="mb-4">Lo que comenzó como un pequeño proyecto personal rápidamente se convirtió en una <strong>plataforma que hoy conecta a más de 500 jóvenes talentosos con oportunidades únicas</strong> en música, tecnología, arte, deporte y más.</p>
+                        <p>Gracias a su liderazgo y visión, el portal ha recibido reconocimientos del Ministerio de Educación de Chile, la UNESCO y diversas organizaciones internacionales. Cristian continúa trabajando día a día para expandir el impacto del portal y asegurar que ningún talento escolar quede en el olvido.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logros y Reconocimientos -->
+    <section class="achievements-section py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <div class="section-badge d-inline-block">★ Logros</div>
+                <h2 class="display-5 fw-bold mt-3">Reconocimientos</h2>
+                <p class="lead">Premios y distinciones obtenidas</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="achievement-card">
+                        <i class="fas fa-award"></i>
+                        <h3>Premio Innovación Educativa</h3>
+                        <p>Reconocimiento del Ministerio de Educación de Chile (2024)</p>
+                        <span class="achievement-year">2024</span>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="achievement-card">
+                        <i class="fas fa-medal"></i>
+                        <h3>Medalla al Emprendimiento Social</h3>
+                        <p>Otorgada por la Universidad Católica de Chile (2023)</p>
+                        <span class="achievement-year">2023</span>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="achievement-card">
+                        <i class="fas fa-globe-americas"></i>
+                        <h3>Proyecto Destacado UNESCO</h3>
+                        <p>Seleccionado como caso de éxito en educación (2024)</p>
+                        <span class="achievement-year">2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades y Especialidades -->
+    <section class="skills-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="section-badge">★ Especialidades</div>
+                    <h2 class="display-5 fw-bold mt-3 mb-4">Habilidades y Experiencia</h2>
+                    <p class="lead mb-4">Un líder comprometido con la educación y la innovación</p>
+                    
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-semibold"><i class="fas fa-chalkboard-user text-primary me-2"></i>Liderazgo Educativo</span>
+                            <span class="text-primary">95%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-gradient" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-semibold"><i class="fas fa-laptop-code text-primary me-2"></i>Innovación Tecnológica</span>
+                            <span class="text-primary">90%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-gradient" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-semibold"><i class="fas fa-users text-primary me-2"></i>Gestión de Equipos</span>
+                            <span class="text-primary">88%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-gradient" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-semibold"><i class="fas fa-chart-line text-primary me-2"></i>Emprendimiento</span>
+                            <span class="text-primary">92%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-gradient" style="width: 92%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="experiencia-card">
+                        <h3><i class="fas fa-briefcase me-2 text-primary"></i>Experiencia Profesional</h3>
+                        <div class="experiencia-item">
+                            <div class="experiencia-year">2022 - Presente</div>
+                            <div class="experiencia-title">Fundador & CEO</div>
+                            <div class="experiencia-company">Portal de Talentos Escolares</div>
+                            <p>Liderazgo estratégico de la plataforma, gestión de equipo y alianzas institucionales.</p>
+                        </div>
+                        <div class="experiencia-item">
+                            <div class="experiencia-year">2015 - 2022</div>
+                            <div class="experiencia-title">Profesor de Tecnología</div>
+                            <div class="experiencia-company">Colegio San Alberto, Santiago</div>
+                            <p>Dictado de clases de tecnología y robótica para estudiantes de enseñanza media.</p>
+                        </div>
+                        <div class="experiencia-item">
+                            <div class="experiencia-year">2012 - 2015</div>
+                            <div class="experiencia-title">Coordinador de Proyectos TI</div>
+                            <div class="experiencia-company">Corporación Educacional SEK</div>
+                            <p>Implementación de plataformas educativas digitales en 5 colegios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formación Académica -->
+    <section class="education-section py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <div class="section-badge d-inline-block">★ Formación</div>
+                <h2 class="display-5 fw-bold mt-3">Formación Académica</h2>
+                <p class="lead">Estudios y especializaciones</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="education-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Magíster en Innovación Educativa</h3>
+                        <p class="education-institution">Universidad de Chile</p>
+                        <p class="education-year">2020 - 2022</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="education-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Ingeniería en Informática</h3>
+                        <p class="education-institution">Universidad Técnica Federico Santa María</p>
+                        <p class="education-year">2008 - 2013</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="education-card">
+                        <i class="fas fa-chalkboard-user"></i>
+                        <h3>Pedagogía en Tecnología</h3>
+                        <p class="education-institution">Universidad Metropolitana de Ciencias de la Educación</p>
+                        <p class="education-year">2014 - 2016</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charlas y Conferencias -->
+    <section class="talks-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <div class="section-badge d-inline-block">★ Charlas</div>
+                <h2 class="display-5 fw-bold mt-3">Charlas y Conferencias</h2>
+                <p class="lead">Compartiendo experiencias y conocimientos</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+                    <div class="talk-card">
+                        <i class="fas fa-microphone-alt"></i>
+                        <div class="talk-info">
+                            <h3>Innovación educativa en el siglo XXI</h3>
+                            <p class="talk-event">Congreso Internacional de Educación, Santiago 2024</p>
+                            <span class="talk-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="talk-card">
+                        <i class="fas fa-microphone-alt"></i>
+                        <div class="talk-info">
+                            <h3>Descubriendo talentos ocultos en el aula</h3>
+                            <p class="talk-event">Encuentro Nacional de Profesores, Viña del Mar 2023</p>
+                            <span class="talk-year">2023</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
+                    <div class="talk-card">
+                        <i class="fas fa-microphone-alt"></i>
+                        <div class="talk-info">
+                            <h3>Emprendimiento social: Cómo impactar desde la educación</h3>
+                            <p class="talk-event">Universidad Católica de Chile, 2023</p>
+                            <span class="talk-year">2023</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="talk-card">
+                        <i class="fas fa-microphone-alt"></i>
+                        <div class="talk-info">
+                            <h3>Tecnología al servicio del talento juvenil</h3>
+                            <p class="talk-event">Feria Internacional de Innovación, 2024</p>
+                            <span class="talk-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frases Inspiradoras -->
+    <section class="quotes-section py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="zoom-in">
+                    <div class="quotes-carousel">
+                        <div class="quote-item">
+                            <i class="fas fa-quote-right quote-icon-big"></i>
+                            <p class="quote-text">"El talento no se crea, se descubre. Y nuestra labor es darle visibilidad."</p>
+                            <h5 class="quote-author">- Cristian Brevis</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="cta-card text-center" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3">¿Quieres conocer más sobre nuestro trabajo?</h2>
+                <p class="lead mb-4">Contáctanos y descubre cómo el Portal de Talentos Escolares puede ayudarte.</p>
+                <a href="contacto.html" target="_blank" class="btn btn-cta btn-lg">
+                    <i class="fas fa-star me-2"></i>Contáctanos ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-gradient text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2026 Portal de Talentos Escolares - Creado por Cristian Brevis</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Descubre, celebra y potencia los talentos de nuestros estudiantes</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Navbar scroll effect
+        $(document).ready(function() {
+            $(window).on('scroll', function() {
+                if ($(window).scrollTop() > 50) {
+                    $('.navbar').css('padding', '0.5rem 0');
+                } else {
+                    $('.navbar').css('padding', '1rem 0');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

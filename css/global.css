@@ -1,83 +1,295 @@
+/* ============================================
+   PORTAL DE TALENTOS ESCOLARES
+   Estilos Globales
+   ============================================ */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Navbar */
+.navbar {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    padding: 20px;
-    }
+    padding: 1rem 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+    color: #FFD700 !important;
+}
+
+.nav-link.active {
+    color: #FFD700 !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    margin-top: 56px;
+}
+
+.hero-badges .badge {
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+.hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     overflow: hidden;
-    }
-
-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 30px;
-    text-align: center;
+    line-height: 0;
 }
 
-header h1 {
-    color:#FFD700;
-    font-size: 3em;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-header p {
-    font-size: 1.2em;
-    opacity: 0.95;
-    text-align: center;
-}
-
-main {
-    padding: 40px;
-}
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-}
-.back-link {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.back-btn {
+/* Section Badge */
+.section-badge {
+    background: linear-gradient(135deg, #667eea20, #764ba220);
+    color: #667eea;
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
     display: inline-block;
-    background: #764ba2;
-    color: white;
-    text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 25px;
-    transition: background 0.3s;
 }
 
-.back-btn:hover {
-    background: #667eea;
+/* Description Card */
+.description-card {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.description-card h2 {
+    color: #667eea;
+}
+
+/* Carrusel */
+.carousel-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.carousel-img {
+    height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 250px;
+    }
+}
+
+/* Category Grid */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.category-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+    border-color: #667eea;
+    text-decoration: none;
+    color: #333;
+}
+
+.category-card i {
+    font-size: 3rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.category-card p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.team-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.15);
+}
+
+.team-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.team-card-link:hover {
+    text-decoration: none;
+}
+
+.team-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #667eea20, #764ba220);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 2rem;
+    color: #667eea;
+}
+
+.team-card h4 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.team-role {
+    color: #667eea;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.team-link {
+    font-size: 0.8rem;
+    color: #667eea;
+    font-weight: 500;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    color: white;
+}
+
+/* Footer */
+.footer-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin-top: 50px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    main {
-        padding: 20px;
+    .hero-section {
+        min-height: 60vh;
     }
     
-    header h1 {
-        font-size: 1.8em;
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-btn {
+        width: 80%;
+        justify-content: center;
     }
 }

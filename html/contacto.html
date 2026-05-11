@@ -23,30 +23,7 @@
     <link rel="stylesheet" href="/css/contacto.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="/index.html">
-                <i class="fas fa-star-of-life me-2"></i>Portal Talentos
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/index.html"><i class="fas fa-home me-1"></i>Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/nosotros.html"><i class="fas fa-users me-1"></i>Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    
 
     <!-- Header de la página -->
     <header class="page-header">
@@ -291,12 +268,25 @@
         </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+   <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script para efecto del navbar -->
+<script>
+    $(document).ready(function() {
+        // Navbar scroll effect
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop() > 50) {
+                $('.navbar').css('padding', '0.5rem 0');
+            } else {
+                $('.navbar').css('padding', '1rem 0');
+            }
+        });
+    });
+</script>
     <!-- JavaScript Personalizado -->
     <script src="/js/contacto.js"></script>
 </body>

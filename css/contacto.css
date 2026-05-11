@@ -1,261 +1,273 @@
 /* ============================================
-   PORTAL DE TALENTOS ESCOLARES
-   Página de Contacto - Estilos
+   PÁGINA DE CONTACTO - ESTILOS
    ============================================ */
 
-* {
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Gradientes */
-.bg-gradient {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.footer-gradient {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-/* Navbar fijo */
-.navbar {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 1rem 0;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-    letter-spacing: -0.5px;
-}
-
-.nav-link {
-    font-weight: 500;
-    transition: all 0.3s ease;
-    margin: 0 5px;
-}
-
-.nav-link:hover {
-    transform: translateY(-2px);
-    color: #FFD700 !important;
-}
-
-.nav-link.active {
-    color: #FFD700 !important;
-}
-
-/* Page Header */
-.page-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 100px 0 60px;
-    margin-top: 56px;
-}
-
-/* Tarjeta de información de contacto */
-.contact-info-card {
-    border-radius: 20px;
-    transition: transform 0.3s ease;
-}
-
-.contact-info-card:hover {
-    transform: translateY(-5px);
-}
-
-.info-item {
+/* Contenedor principal del contacto */
+.contacto-wrapper {
     display: flex;
-    align-items: flex-start;
-    gap: 15px;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+/* Información de contacto */
+.contacto-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.contacto-info h2 {
+    color: #667eea;
+    margin-bottom: 25px;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .info-icon {
-    width: 45px;
-    height: 45px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-    flex-shrink: 0;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    display: block;
 }
 
-.info-text h5 {
-    font-size: 1rem;
-    margin-bottom: 5px;
+.info-card h3 {
+    color: #764ba2;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.info-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Contenedor del formulario */
+.formulario-container {
+    flex: 2;
+    min-width: 300px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.formulario-container h2 {
+    color: #667eea;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
     color: #333;
 }
 
-.info-text p {
-    margin-bottom: 0;
-    font-size: 0.9rem;
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+    font-family: inherit;
 }
 
-/* Redes Sociales */
-.social-links {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
 }
 
-.social-link {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+/* Checkbox */
+.checkbox-group {
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
+    gap: 10px;
+}
+
+.checkbox-group input {
+    width: auto;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+}
+
+.checkbox-group a {
+    color: #667eea;
     text-decoration: none;
 }
 
-.social-link.facebook {
-    background: #1877f2;
-}
-
-.social-link.instagram {
-    background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
-}
-
-.social-link.twitter {
-    background: #1da1f2;
-}
-
-.social-link.linkedin {
-    background: #0077b5;
-}
-
-.social-link.youtube {
-    background: #ff0000;
-}
-
-.social-link:hover {
-    transform: translateY(-3px);
-    color: white;
-}
-
-/* Formulario */
-.form-control, .form-select {
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 12px 15px;
-    transition: all 0.3s ease;
-}
-
-.form-control:focus, .form-select:focus {
-    border-color: #667eea;
-    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+.checkbox-group a:hover {
+    text-decoration: underline;
 }
 
 /* Mensajes de error */
 .error-message {
-    color: #dc3545;
-    font-size: 0.8rem;
-    margin-top: 6px;
+    color: #ff4444;
+    font-size: 0.85em;
+    margin-top: 5px;
     display: block;
-    animation: fadeIn 0.3s ease;
 }
 
-.input-error {
-    border-color: #dc3545 !important;
-    background-color: #fff8f8;
+/* Botones del formulario */
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
 }
 
-.input-valid {
-    border-color: #28a745 !important;
-}
-
-/* Botón primario */
-.btn-primary {
+.btn-submit {
+    flex: 1;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border: none;
-    border-radius: 12px;
-    padding: 12px 24px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-}
-
-.btn-outline-secondary {
-    border-radius: 12px;
-    padding: 12px 24px;
-    font-weight: 600;
-    border: 2px solid #667eea;
-    color: #667eea;
-}
-
-.btn-outline-secondary:hover {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-color: transparent;
     color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-reset {
+    flex: 1;
+    background: #f0f0f0;
+    color: #666;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-reset:hover {
+    background: #e0e0e0;
 }
 
 /* Mensaje de éxito */
-.alert-success {
-    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-    border: none;
-    border-radius: 12px;
-    animation: slideDown 0.5s ease;
+.mensaje-exito {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-/* Animaciones */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-5px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.exito-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    animation: slideDown 0.3s ease;
+}
+
+.exito-icon {
+    font-size: 4em;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.exito-content h3 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.exito-content p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.btn-cerrar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
 }
 
 @keyframes slideDown {
     from {
+        transform: translateY(-50px);
         opacity: 0;
-        transform: translateY(-30px);
     }
     to {
-        opacity: 1;
         transform: translateY(0);
+        opacity: 1;
     }
+}
+
+/* Sección del mapa */
+.mapa-section {
+    margin-bottom: 30px;
+}
+
+.mapa-section h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+}
+
+.mapa-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .page-header {
-        padding: 80px 0 40px;
+    .contacto-wrapper {
+        flex-direction: column;
     }
     
-    .page-header h1 {
-        font-size: 1.8rem;
+    .form-buttons {
+        flex-direction: column;
     }
     
-    .card-body {
-        padding: 1.5rem !important;
+    .info-cards {
+        grid-template-columns: 1fr;
     }
     
-    .info-item {
-        margin-bottom: 20px;
+    .formulario-container {
+        padding: 20px;
     }
-    
-    .social-links {
-        flex-wrap: wrap;
-    }
-}
-
-/* Card hover effect */
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 20px;
-}
-
-.card:hover {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
 }

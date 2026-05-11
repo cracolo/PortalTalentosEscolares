@@ -7,33 +7,64 @@
     <meta name="description" content="Contáctanos - Portal de Talentos Escolares">
     <meta name="title" content="Contacto | Portal de Talentos Escolares">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Contacto | Portal de Talentos Escolares</title>
     
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Font Awesome (iconos) -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="/css/contacto.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📧</text></svg>">
 </head>
 <body>
-    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-star-of-life me-2"></i>Portal Talentos
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html/nosotros.html">
+                            <i class="fas fa-users me-1"></i>Nosotros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">
+                            <i class="fas fa-envelope me-1"></i>Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Header de la página -->
     <header class="page-header">
         <div class="container text-center py-5">
-            <h1 class="display-4 fw-bold animate__animated animate__fadeInUp">
+            <h1 class="display-4 fw-bold">
                 <i class="fas fa-envelope-open-text me-3"></i>Contáctanos
             </h1>
-            <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
-                Estamos aquí para ayudarte. Cuéntanos tu consulta y te responderemos a la brevedad.
-            </p>
+            <p class="lead">Estamos aquí para ayudarte. Cuéntanos tu consulta y te responderemos a la brevedad.</p>
         </div>
     </header>
 
@@ -63,7 +94,7 @@
                             </div>
                             <div class="info-text">
                                 <h5>Teléfono</h5>
-                                <p class="text-muted">+56 2 1234 5678</p>
+                                <p class="text-muted">+56 65 234 5678</p>
                                 <p class="text-muted small">Lun a Vie: 9:00 - 18:00</p>
                             </div>
                         </div>
@@ -101,7 +132,6 @@
                             <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
                             <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -122,8 +152,7 @@
                                     <label for="nombre" class="form-label fw-semibold">
                                         <i class="fas fa-user me-1 text-primary"></i>Nombre completo *
                                     </label>
-                                    <input type="text" class="form-control" id="nombre" 
-                                           placeholder="Tu nombre completo">
+                                    <input type="text" class="form-control" id="nombre" placeholder="Tu nombre completo">
                                     <div class="error-message" id="error-nombre"></div>
                                 </div>
                                 
@@ -131,8 +160,7 @@
                                     <label for="email" class="form-label fw-semibold">
                                         <i class="fas fa-envelope me-1 text-primary"></i>Correo electrónico *
                                     </label>
-                                    <input type="email" class="form-control" id="email" 
-                                           placeholder="tu@email.com">
+                                    <input type="email" class="form-control" id="email" placeholder="tu@email.com">
                                     <div class="error-message" id="error-email"></div>
                                 </div>
                             </div>
@@ -141,10 +169,9 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="telefono" class="form-label fw-semibold">
-                                        <i class="fas fa-phone me-1 text-primary"></i>Teléfono
+                                        <i class="fas fa-phone me-1 text-primary"></i>Teléfono *
                                     </label>
-                                    <input type="tel" class="form-control" id="telefono" 
-                                           placeholder="+56 9 1234 5678">
+                                    <input type="tel" class="form-control" id="telefono" placeholder="+56 9 1234 5678">
                                     <div class="error-message" id="error-telefono"></div>
                                 </div>
                                 
@@ -171,9 +198,8 @@
                                 <label for="mensaje" class="form-label fw-semibold">
                                     <i class="fas fa-comment-dots me-1 text-primary"></i>Mensaje *
                                 </label>
-                                <textarea class="form-control" id="mensaje" rows="5" 
-                                          placeholder="Escribe tu mensaje aquí..."></textarea>
-                                <div class="form-text text-muted">Mínimo 10 caracteres</div>
+                                <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                                <div class="form-text text-muted">Mínimo 10 caracteres, máximo 500</div>
                                 <div class="error-message" id="error-mensaje"></div>
                             </div>
 
@@ -215,26 +241,19 @@
                 <!-- Mapa -->
                 <div class="card border-0 shadow-sm mt-4 overflow-hidden">
                     <div class="card-body p-0">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.999999999999!2d-72.933333!3d-41.466667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDI4JzAwLjAiUyA3MsKwNTYnMDAuMCJX!5e0!3m2!1ses!2scl!4v1640000000000!5m2!1ses!2scl" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.999999999999!2d-72.933333!3d-41.466667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDI4JzAwLjAiUyA3MsKwNTYnMDAuMCJX!5e0!3m2!1ses!2scl!4v1640000000000!5m2!1ses!2scl" 
+                            width="100%" 
+                            height="250" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer-gradient text-white py-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2026 Portal de Talentos Escolares</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Descubre y celebra los talentos de nuestros estudiantes</p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <!-- Modal de Términos y Condiciones -->
     <div class="modal fade" id="modalTerminos" tabindex="-1">
@@ -261,26 +280,266 @@
         </div>
     </div>
 
-   <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Footer -->
+    <footer class="footer-gradient text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2026 Portal de Talentos Escolares - Creado por Cristian Brevis</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Descubre, celebra y potencia los talentos de nuestros estudiantes</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<!-- Bootstrap 5 JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Script para efecto del navbar -->
-<script>
-    $(document).ready(function() {
-        // Navbar scroll effect
-        $(window).on('scroll', function() {
-            if ($(window).scrollTop() > 50) {
-                $('.navbar').css('padding', '0.5rem 0');
-            } else {
-                $('.navbar').css('padding', '1rem 0');
-            }
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript de validaciones -->
+    <script>
+        $(document).ready(function() {
+            inicializarFormulario();
+            
+            // Navbar scroll effect
+            $(window).on('scroll', function() {
+                if ($(window).scrollTop() > 50) {
+                    $('.navbar').css('padding', '0.5rem 0');
+                } else {
+                    $('.navbar').css('padding', '1rem 0');
+                }
+            });
         });
-    });
-</script>
-    <!-- JavaScript Personalizado -->
-    <script src="/js/contacto.js"></script>
+
+        function inicializarFormulario() {
+            $('#formContacto').on('submit', function(e) {
+                e.preventDefault();
+                validarFormulario();
+            });
+            
+            $('#btnReset').on('click', function() {
+                resetearFormulario();
+            });
+            
+            // Validaciones en tiempo real
+            $('#nombre').on('input', function() { validarNombre(); });
+            $('#email').on('input', function() { validarEmail(); });
+            $('#telefono').on('input', function() { validarTelefono(); });
+            $('#asunto').on('change', function() { validarAsunto(); });
+            $('#mensaje').on('input', function() { validarMensaje(); });
+            $('#terminos').on('change', function() { validarTerminos(); });
+        }
+
+        // Validar formulario completo
+        function validarFormulario() {
+            let esValido = true;
+            limpiarErrores();
+            
+            esValido = validarNombre() && esValido;
+            esValido = validarEmail() && esValido;
+            esValido = validarTelefono() && esValido;
+            esValido = validarAsunto() && esValido;
+            esValido = validarMensaje() && esValido;
+            esValido = validarTerminos() && esValido;
+            
+            if (esValido) {
+                mostrarMensajeExito();
+                console.log('Formulario enviado:', obtenerDatosFormulario());
+            }
+            
+            return esValido;
+        }
+
+        // Validar Nombre
+        function validarNombre() {
+            const $nombre = $('#nombre');
+            const valor = $nombre.val().trim();
+            const $errorDiv = $('#error-nombre');
+            
+            if (valor === '') {
+                $errorDiv.text('El nombre completo es obligatorio');
+                $nombre.addClass('input-error').removeClass('input-valid');
+                return false;
+            }
+            
+            if (valor.length < 3) {
+                $errorDiv.text('Ingresa un nombre válido (mínimo 3 caracteres)');
+                $nombre.addClass('input-error').removeClass('input-valid');
+                return false;
+            }
+            
+            if (valor.length > 80) {
+                $errorDiv.text('El nombre no puede tener más de 80 caracteres');
+                $nombre.addClass('input-error').removeClass('input-valid');
+                return false;
+            }
+            
+            const regex = /^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]+$/;
+            if (!regex.test(valor)) {
+                $errorDiv.text('El nombre solo puede contener letras y espacios');
+                $nombre.addClass('input-error').removeClass('input-valid');
+                return false;
+            }
+            
+            $errorDiv.text('');
+            $nombre.removeClass('input-error').addClass('input-valid');
+            return true;
+        }
+
+        // Validar Email
+        function validarEmail() {
+            const $email = $('#email');
+            const valor = $email.val().trim();
+            const $errorDiv = $('#error-email');
+            
+            if (valor === '') {
+                $errorDiv.text('El correo electrónico es obligatorio');
+                $email.addClass('input-error').removeClass('input-valid');
+                return false;
+            }
+            
+            const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!regex.test(valor)) {
+                $errorDiv.text('Ingresa un correo electrónico válido (ejemplo@dominio.com)');
+                $email.addClass('input-error').removeClass('input-valid');
+                return false;
+            }
+            
+            $errorDiv.text('');
+            $email.removeClass('input-error').addClass('input-valid');
+            return true;
+        }
+
+        // Validar Teléfono
+        function validarTelefono() {
+            const $telefono = $('#telefono');
+            const valor = $telefono.val().trim();
+            const $errorDiv = $('#error-telefono');
+            
+            if (valor === '') {
+                $errorDiv.text('El teléfono es obligatorio');
+                $telefono.addClass('input-error').removeClass('input-valid');
+                return false;
+            }
+            
+            const regex = /^(\+?56)?\s?9\s?\d{4}\s?\d{4}$/;
+            if (!regex.test(valor)) {
+                $errorDiv.text('Ingresa un teléfono válido (ej: +56 9 1234 5678)');
+                $telefono.addClass('input-error').removeClass('input-valid');
+                return false;
+            }
+            
+            $errorDiv.text('');
+            $telefono.removeClass('input-error').addClass('input-valid');
+            return true;
+        }
+
+        // Validar Asunto
+        function validarAsunto() {
+            const $asunto = $('#asunto');
+            const valor = $asunto.val();
+            const $errorDiv = $('#error-asunto');
+            
+            if (valor === '') {
+                $errorDiv.text('Selecciona un asunto para tu consulta');
+                $asunto.addClass('input-error').removeClass('input-valid');
+                return false;
+            }
+            
+            $errorDiv.text('');
+            $asunto.removeClass('input-error').addClass('input-valid');
+            return true;
+        }
+
+        // Validar Mensaje
+        function validarMensaje() {
+            const $mensaje = $('#mensaje');
+            const valor = $mensaje.val().trim();
+            const $errorDiv = $('#error-mensaje');
+            
+            if (valor === '') {
+                $errorDiv.text('El mensaje es obligatorio');
+                $mensaje.addClass('input-error').removeClass('input-valid');
+                return false;
+            }
+            
+            if (valor.length < 10) {
+                $errorDiv.text('El mensaje debe tener al menos 10 caracteres');
+                $mensaje.addClass('input-error').removeClass('input-valid');
+                return false;
+            }
+            
+            if (valor.length > 500) {
+                $errorDiv.text('El mensaje no puede tener más de 500 caracteres');
+                $mensaje.addClass('input-error').removeClass('input-valid');
+                return false;
+            }
+            
+            $errorDiv.text('');
+            $mensaje.removeClass('input-error').addClass('input-valid');
+            return true;
+        }
+
+        // Validar Términos
+        function validarTerminos() {
+            const $terminos = $('#terminos');
+            const $errorDiv = $('#error-terminos');
+            
+            if (!$terminos.is(':checked')) {
+                $errorDiv.text('Debes aceptar los términos y condiciones');
+                return false;
+            }
+            
+            $errorDiv.text('');
+            return true;
+        }
+
+        // Limpiar errores
+        function limpiarErrores() {
+            $('.error-message').text('');
+            $('.form-control, .form-select').removeClass('input-error input-valid');
+        }
+
+        // Resetear formulario
+        function resetearFormulario() {
+            $('#formContacto')[0].reset();
+            limpiarErrores();
+            $('#mensajeExito').fadeOut(300);
+            $('#error-terminos').text('');
+        }
+
+        // Mostrar mensaje de éxito
+        function mostrarMensajeExito() {
+            const $mensajeExito = $('#mensajeExito');
+            
+            $mensajeExito.hide().fadeIn(500);
+            
+            $('html, body').animate({
+                scrollTop: $mensajeExito.offset().top - 100
+            }, 500);
+            
+            setTimeout(() => {
+                resetearFormulario();
+            }, 2000);
+            
+            setTimeout(() => {
+                $mensajeExito.fadeOut(500);
+            }, 5000);
+        }
+
+        // Obtener datos del formulario
+        function obtenerDatosFormulario() {
+            return {
+                nombre: $('#nombre').val(),
+                email: $('#email').val(),
+                telefono: $('#telefono').val(),
+                asunto: $('#asunto option:selected').text(),
+                mensaje: $('#mensaje').val(),
+                fecha: new Date().toLocaleString('es-CL')
+            };
+        }
+    </script>
 </body>
 </html>

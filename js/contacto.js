@@ -1,10 +1,3 @@
-/**
- * Portal de Talentos Escolares
- * Página de Contacto - Validaciones
- * Tecnologías: JavaScript + jQuery
- * Archivo: contacto.js
- */
-
 $(document).ready(function() {
     inicializarFormulario();
     
@@ -24,8 +17,9 @@ function inicializarFormulario() {
     });
     
     // Evento reset
-    $('#btnReset').on('click', function() {
-        resetearFormulario();
+   $('#btnReset').on('click', function() {
+    $('#formContacto')[0].reset();
+    limpiarErrores();
     });
     
     // Validaciones en tiempo real

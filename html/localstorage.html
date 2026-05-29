@@ -1,0 +1,42 @@
+<html>
+    <head><script src="../js/localstorage.js"></script></head> 
+        <body>
+            <h2>Ejemplo de local Storage</h2>
+            <input type="text" id="nombre" placeholder="Ingresa tu Name Aquí!">
+            <button onclick="guardarname()">Guardar</button>
+            <button onclick="mostrarname()">Mostrar</button>
+            <button onclick="borrarname()">Eliminar</button>
+            <p id="resultado"></p>
+            <ul id="lista"></ul>
+            <script>
+                fetch('../js/datos.json')
+                .then(response => response.json())
+                .then(data => { let lista = document.getElementById('lista');
+                    data.forEach(item => {
+                        let li = document.createElement('li');
+                        li.textContent = `Nombre: ${item.nombre}, Edad: ${item.Edad}, Ciudad: ${item.Ciudad}`;
+                        lista.appendChild(li);
+                    });
+                })
+            </script>
+            <table id="tabla" border="1"></table>
+            <script>
+                fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vSnDWM0NltZTc7a1tDPmOa2v9_dlmP9HqB0oR3kDWVV5_UIyJARM6OYZOwTdhC_Ig/pub?gid=528313697&single=true&output=csv")
+                .then(response => response.text())
+                .then(data => {
+                    let filas = data.split("\n");
+                    let tabla = document.getElementById("tabla");
+                    filas.forEach(fila => {
+                        let celdas = fila.split(",");
+                        let tr = document.createElement("tr");
+                        celdas.forEach(celda => {
+                            let td = document.createElement("td");
+                            td.textContent = celda;
+                            tr.appendChild(td);
+                        });
+                        tabla.appendChild(tr);
+                    });
+                })
+            </script>
+            </body>
+    </html>

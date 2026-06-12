@@ -21,7 +21,7 @@
             </script>
             <table id="tabla" border="1"></table>
             <script>
-                fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vSnDWM0NltZTc7a1tDPmOa2v9_dlmP9HqB0oR3kDWVV5_UIyJARM6OYZOwTdhC_Ig/pub?gid=528313697&single=true&output=csv")
+                fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vSOUFpLd8bcScYujazQ6wI3UbxteMFOHN-dBKoZibTPWiAdMchN5I7kaWqx87mWH1Cc_Qw3BXfLGcqM/pub?output=csv")
                 .then(response => response.text())
                 .then(data => {
                     let filas = data.split("\n");

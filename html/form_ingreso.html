@@ -7,37 +7,76 @@
     <meta name="description" content="Formulario de registro de talentos - Portal de Talentos Escolares">
     <meta name="title" content="Registro de Talentos | Portal de Talentos Escolares">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Registro de Talentos | Portal de Talentos Escolares</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Font Awesome (iconos) -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="/css/form_ingreso.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/form_ingreso.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
 </head>
 <body>
-    <div class="container-fluid px-0">
-        <header class="header-gradient text-white py-5">
-            <div class="container text-center">
-                <h1 class="display-4 fw-bold">
-                    <i class="fas fa-star-of-life"></i> Registra tu Talento
-                </h1>
-                <p class="lead">Comparte tu habilidad única y forma parte de nuestra comunidad</p>
-            </div>
-        </header>
 
-        <main class="container my-5">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-star-of-life me-2"></i>Portal Talentos
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html"><i class="fas fa-home me-1"></i>Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/nosotros.html"><i class="fas fa-users me-1"></i>Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="form-hero">
+            <div class="container">
+                <div class="row min-vh-50 align-items-center">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <div class="hero-icon">
+                            
+                        </div>
+                        <h1 class="display-3 fw-bold mb-4">Registra tu Talento</h1>
+                        <p class="lead mb-4">Comparte tu habilidad única y forma parte de nuestra comunidad</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-wave-bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14400 320">
+                    <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <div class="container my-5">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
                     <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
-                        <div class="card-header bg-gradient text-white py-4">
+                        <div class="card-header bg-gradient text-black py-4">
                             <h2 class="text-center mb-0 fw-bold">
                                 <i class="fas fa-pen-alt me-2"></i>Formulario de Registro
                             </h2>
@@ -46,7 +85,7 @@
                         
                         <div class="card-body p-4 p-lg-5">
                             <!-- Formulario -->
-                            <form id="formTalento">
+                            <form id="formTalento" novalidate>
                                 <!-- Nombre y Apellidos -->
                                 <div class="mb-4">
                                     <label for="nombre" class="form-label fw-semibold">
@@ -55,6 +94,7 @@
                                     <input type="text" class="form-control form-control-lg" id="nombre" 
                                            placeholder="Ej: Ana María Pérez González">
                                     <div class="error-message" id="error-nombre"></div>
+                                    <div class="valid-message" id="valid-nombre"></div>
                                 </div>
 
                                 <!-- Dirección -->
@@ -65,6 +105,7 @@
                                     <input type="text" class="form-control form-control-lg" id="direccion" 
                                            placeholder="Ej: Av. Los Talentos 123, Santiago">
                                     <div class="error-message" id="error-direccion"></div>
+                                    <div class="valid-message" id="valid-direccion"></div>
                                 </div>
 
                                 <!-- Teléfono -->
@@ -75,6 +116,7 @@
                                     <input type="tel" class="form-control form-control-lg" id="telefono" 
                                            placeholder="Ej: +56 9 1234 5678">
                                     <div class="error-message" id="error-telefono"></div>
+                                    <div class="valid-message" id="valid-telefono"></div>
                                 </div>
 
                                 <!-- E-mail -->
@@ -85,6 +127,7 @@
                                     <input type="email" class="form-control form-control-lg" id="email" 
                                            placeholder="Ej: ana.perez@ejemplo.com">
                                     <div class="error-message" id="error-email"></div>
+                                    <div class="valid-message" id="valid-email"></div>
                                 </div>
 
                                 <!-- Género -->
@@ -113,6 +156,7 @@
                                         </div>
                                     </div>
                                     <div class="error-message" id="error-genero"></div>
+                                    <div class="valid-message" id="valid-genero"></div>
                                 </div>
 
                                 <!-- Talento (Menú desplegable) -->
@@ -132,6 +176,7 @@
                                         <option value="otro_talento">✨ Otro talento</option>
                                     </select>
                                     <div class="error-message" id="error-talento"></div>
+                                    <div class="valid-message" id="valid-talento"></div>
                                 </div>
 
                                 <!-- Cuéntanos de tu talento -->
@@ -143,11 +188,12 @@
                                               placeholder="Describe tu talento, experiencia, logros o por qué te apasiona..."></textarea>
                                     <div class="form-text text-muted">Mínimo 20 caracteres, máximo 500 caracteres</div>
                                     <div class="error-message" id="error-descripcion"></div>
+                                    <div class="valid-message" id="valid-descripcion"></div>
                                 </div>
 
                                 <!-- Botones -->
                                 <div class="d-flex gap-3 mt-4">
-                                    <button type="submit" class="btn btn-primary btn-lg flex-grow-1">
+                                    <button type="submit" class="btn btn-primary btn-lg flex-grow-1" id="btnEnviar" disabled>
                                         <i class="fas fa-paper-plane me-2"></i>Enviar Registro
                                     </button>
                                     <button type="reset" class="btn btn-outline-secondary btn-lg" id="btnReset">
@@ -166,26 +212,35 @@
                                     </div>
                                 </div>
                             </div>
+                           
+<div class="text-center mt-4 pt-3 border-top">
+    <p class="text-muted small mb-2">
+        <i class="fas fa-lock me-1"></i> ¿Administrador?
+    </p>
+    <a href="admin-talentos.html" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-cog me-1"></i> Gestionar Talentos
+    </a>
+</div>
                         </div>
                     </div>
 
                     <!-- Botón volver al inicio -->
                     <div class="text-center mt-4">
-                        <a href="/index.html" class="btn btn-link text-decoration-none">
+                        <a href="../index.html" class="btn btn-link text-decoration-none">
                             <i class="fas fa-arrow-left me-2"></i>Volver al Inicio
                         </a>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <!-- Footer -->
-        <footer class="footer-gradient text-white py-4 mt-5">
-            <div class="container text-center">
-                <p class="mb-0">&copy; 2026 Portal de Talentos Escolares - Descubre y celebra los talentos de nuestros estudiantes</p>
-            </div>
-        </footer>
-    </div>
+    <!-- Footer -->
+    <footer class="footer-gradient text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 Portal de Talentos Escolares - Descubre y celebra los talentos de nuestros estudiantes</p>
+        </div>
+    </footer>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -194,6 +249,305 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- JavaScript Personalizado -->
-    <script src="/js/form_ingreso.js"></script>
+      <script>
+        $(document).ready(function() {
+            inicializarFormulario();
+            
+            // Navbar scroll effect
+            $(window).on('scroll', function() {
+                if ($(window).scrollTop() > 50) {
+                    $('.navbar').css('padding', '0.5rem 0');
+                } else {
+                    $('.navbar').css('padding', '1rem 0');
+                }
+            });
+        });
+
+        function inicializarFormulario() {
+            // Validaciones en tiempo real
+            $('#nombre').on('input', function() { validarNombre(); });
+            $('#direccion').on('input', function() { validarDireccion(); });
+            $('#telefono').on('input', function() { validarTelefono(); });
+            $('#email').on('input', function() { validarEmail(); });
+            $('input[name="genero"]').on('change', function() { validarGenero(); });
+            $('#talento').on('change', function() { validarTalento(); });
+            $('#descripcion').on('input', function() { validarDescripcion(); });
+            
+            // Envío del formulario
+            $('#formTalento').on('submit', function(e) {
+                e.preventDefault();
+                if (validarFormularioCompleto()) {
+                    guardarDatos();
+                }
+            });
+            
+            // Reset
+            $('#btnReset').on('click', function() {
+                resetearFormulario();
+            });
+        }
+
+        // ===== VALIDACIONES =====
+
+        function validarNombre() {
+            const $campo = $('#nombre');
+            const valor = $campo.val().trim();
+            const $error = $('#error-nombre');
+            const $valid = $('#valid-nombre');
+            
+            if (valor === '') {
+                $error.text('El nombre y apellidos son obligatorios');
+                $valid.text('');
+                $campo.removeClass('input-valid').addClass('input-error');
+                return false;
+            }
+            
+            if (valor.length < 5) {
+                $error.text('Ingresa nombre y apellido completo (mínimo 5 caracteres)');
+                $valid.text('');
+                $campo.removeClass('input-valid').addClass('input-error');
+                return false;
+            }
+            
+            const regex = /^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]+$/;
+            if (!regex.test(valor)) {
+                $error.text('El nombre solo puede contener letras y espacios');
+                $valid.text('');
+                $campo.removeClass('input-valid').addClass('input-error');
+                return false;
+            }
+            
+            $error.text('');
+            $valid.text('✓ Nombre válido');
+            $campo.removeClass('input-error').addClass('input-valid');
+            return true;
+        }
+
+        function validarDireccion() {
+            const $campo = $('#direccion');
+            const valor = $campo.val().trim();
+            const $error = $('#error-direccion');
+            const $valid = $('#valid-direccion');
+            
+            if (valor === '') {
+                $error.text('La dirección es obligatoria');
+                $valid.text('');
+                $campo.removeClass('input-valid').addClass('input-error');
+                return false;
+            }
+            
+            if (valor.length < 10) {
+                $error.text('Ingresa una dirección completa (mínimo 10 caracteres)');
+                $valid.text('');
+                $campo.removeClass('input-valid').addClass('input-error');
+                return false;
+            }
+            
+            $error.text('');
+            $valid.text('✓ Dirección válida');
+            $campo.removeClass('input-error').addClass('input-valid');
+            return true;
+        }
+
+        function validarTelefono() {
+            const $campo = $('#telefono');
+            const valor = $campo.val().trim();
+            const $error = $('#error-telefono');
+            const $valid = $('#valid-telefono');
+            
+            if (valor === '') {
+                $error.text('El teléfono es obligatorio');
+                $valid.text('');
+                $campo.removeClass('input-valid').addClass('input-error');
+                return false;
+            }
+            
+            const regex = /^(\+?56)?\s?9\s?\d{4}\s?\d{4}$/;
+            if (!regex.test(valor)) {
+                $error.text('Ingresa un teléfono válido (ej: +56 9 1234 5678)');
+                $valid.text('');
+                $campo.removeClass('input-valid').addClass('input-error');
+                return false;
+            }
+            
+            $error.text('');
+            $valid.text('✓ Teléfono válido');
+            $campo.removeClass('input-error').addClass('input-valid');
+            return true;
+        }
+
+        function validarEmail() {
+            const $campo = $('#email');
+            const valor = $campo.val().trim();
+            const $error = $('#error-email');
+            const $valid = $('#valid-email');
+            
+            if (valor === '') {
+                $error.text('El correo electrónico es obligatorio');
+                $valid.text('');
+                $campo.removeClass('input-valid').addClass('input-error');
+                return false;
+            }
+            
+            const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!regex.test(valor)) {
+                $error.text('Ingresa un correo electrónico válido (ejemplo@dominio.com)');
+                $valid.text('');
+                $campo.removeClass('input-valid').addClass('input-error');
+                return false;
+            }
+            
+            $error.text('');
+            $valid.text('✓ Correo válido');
+            $campo.removeClass('input-error').addClass('input-valid');
+            return true;
+        }
+
+        function validarGenero() {
+            const $seleccionado = $('input[name="genero"]:checked');
+            const $error = $('#error-genero');
+            const $valid = $('#valid-genero');
+            
+            if ($seleccionado.length === 0) {
+                $error.text('Debes seleccionar un género');
+                $valid.text('');
+                return false;
+            }
+            
+            $error.text('');
+            $valid.text('✓ Género seleccionado');
+            return true;
+        }
+
+        function validarTalento() {
+            const $campo = $('#talento');
+            const valor = $campo.val();
+            const $error = $('#error-talento');
+            const $valid = $('#valid-talento');
+            
+            if (valor === '') {
+                $error.text('Debes seleccionar un talento');
+                $valid.text('');
+                $campo.removeClass('input-valid').addClass('input-error');
+                return false;
+            }
+            
+            $error.text('');
+            $valid.text('✓ Talento seleccionado');
+            $campo.removeClass('input-error').addClass('input-valid');
+            return true;
+        }
+
+        function validarDescripcion() {
+            const $campo = $('#descripcion');
+            const valor = $campo.val().trim();
+            const $error = $('#error-descripcion');
+            const $valid = $('#valid-descripcion');
+            
+            if (valor === '') {
+                $error.text('Cuéntanos sobre tu talento, es obligatorio');
+                $valid.text('');
+                $campo.removeClass('input-valid').addClass('input-error');
+                return false;
+            }
+            
+            if (valor.length < 20) {
+                $error.text('Describe tu talento con más detalle (mínimo 20 caracteres)');
+                $valid.text('');
+                $campo.removeClass('input-valid').addClass('input-error');
+                return false;
+            }
+            
+            if (valor.length > 500) {
+                $error.text('La descripción no puede tener más de 500 caracteres');
+                $valid.text('');
+                $campo.removeClass('input-valid').addClass('input-error');
+                return false;
+            }
+            
+            $error.text('');
+            $valid.text('✓ Descripción válida');
+            $campo.removeClass('input-error').addClass('input-valid');
+            return true;
+        }
+
+        // ===== FUNCIONES PRINCIPALES =====
+
+        function validarFormularioCompleto() {
+            const esValido = 
+                validarNombre() &&
+                validarDireccion() &&
+                validarTelefono() &&
+                validarEmail() &&
+                validarGenero() &&
+                validarTalento() &&
+                validarDescripcion();
+            
+            // Habilitar/deshabilitar botón de envío
+            $('#btnEnviar').prop('disabled', !esValido);
+            
+            return esValido;
+        }
+
+        function guardarDatos() {
+            // Recoger datos del formulario
+            const nuevoRegistro = {
+                id: Date.now(),
+                nombre: $('#nombre').val().trim(),
+                direccion: $('#direccion').val().trim(),
+                telefono: $('#telefono').val().trim(),
+                email: $('#email').val().trim(),
+                genero: $('input[name="genero"]:checked').val(),
+                talento: $('#talento').val(),
+                descripcion: $('#descripcion').val().trim(),
+                fecha_registro: new Date().toLocaleString('es-CL')
+            };
+
+            // Obtener datos existentes del localStorage
+            let datos = JSON.parse(localStorage.getItem('talentos_registrados')) || [];
+            
+            // Agregar nuevo registro
+            datos.push(nuevoRegistro);
+            
+            // Guardar en localStorage
+            localStorage.setItem('talentos_registrados', JSON.stringify(datos));
+            
+            // Mostrar mensaje de éxito
+            mostrarMensajeExito();
+            
+            // Limpiar formulario
+            resetearFormulario();
+            
+            console.log('Datos guardados:', nuevoRegistro);
+            console.log('Total de registros:', datos.length);
+        }
+
+        
+
+        function mostrarMensajeExito() {
+            const $mensaje = $('#mensajeExito');
+            $mensaje.hide().fadeIn(500);
+            $('html, body').animate({
+                scrollTop: $mensaje.offset().top - 100
+            }, 500);
+            
+            setTimeout(() => {
+                $mensaje.fadeOut(500);
+            }, 5000);
+        }
+
+        function resetearFormulario() {
+            $('#formTalento')[0].reset();
+            $('.error-message').text('');
+            $('.valid-message').text('');
+            $('.form-control, .form-select').removeClass('input-error input-valid');
+            $('#btnEnviar').prop('disabled', true);
+        }
+
+        // Validación en tiempo real para todos los campos
+        $(document).on('input change', '#formTalento input, #formTalento select, #formTalento textarea', function() {
+            validarFormularioCompleto();
+        });
+    </script>
 </body>
 </html>

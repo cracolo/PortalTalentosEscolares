@@ -1,0 +1,220 @@
+/* ============================================
+   PANEL DE ADMINISTRACIÓN - Estilos específicos
+   ============================================ */
+
+/* Hero Section */
+.admin-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    margin-top: 56px;
+}
+
+.hero-icon i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.hero-wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+/* Cards de estadísticas */
+.stats-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 20px 25px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.stats-card i {
+    font-size: 2.5rem;
+    color: #667eea;
+}
+
+.stats-card h5 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.stats-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Tabla */
+.table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.badge {
+    font-weight: 500;
+    padding: 6px 12px;
+}
+
+/* Error message */
+.error-message {
+    color: #dc3545;
+    font-size: 0.9rem;
+}
+
+/* Botón toggle password */
+#togglePassword {
+    border-left: none;
+    border-radius: 0 12px 12px 0;
+    border: 2px solid #e0e0e0;
+    border-left: none;
+}
+
+#togglePassword:hover {
+    background: #f8f9fa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-hero {
+        min-height: 30vh;
+    }
+    
+    .admin-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .stats-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .table {
+        font-size: 0.85rem;
+    }
+    
+    .table td,
+    .table th {
+        padding: 8px;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#panelDatos {
+    animation: fadeIn 0.5s ease;
+}
+/* ============================================
+   ESTILOS PARA DETALLE Y EDICIÓN
+   ============================================ */
+
+.detail-item {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+    background: #f0f0f0;
+}
+
+.detail-item label {
+    font-size: 0.85rem;
+    color: #666;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.detail-item p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+/* Estilos para el formulario de edición dentro del modal */
+#formEditar .form-control,
+#formEditar .form-select {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#formEditar .form-control:focus,
+#formEditar .form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+#formEditar .form-label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Botones en la tabla */
+.table .btn-sm {
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.table .btn-info {
+    background: #17a2b8;
+    color: white;
+}
+
+.table .btn-info:hover {
+    background: #138496;
+}
+
+.table .btn-warning {
+    background: #ffc107;
+    color: #333;
+}
+
+.table .btn-warning:hover {
+    background: #e0a800;
+}
+
+.table .btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.table .btn-danger:hover {
+    background: #c82333;
+}

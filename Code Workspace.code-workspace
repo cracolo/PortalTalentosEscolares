@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../Robótica y automatización/web+simulador/simulador"
+		},
+		{
+			"path": "../../../backend/Portal_Talentos"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Code Workspace"
+	}
+}

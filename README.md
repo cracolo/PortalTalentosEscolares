@@ -1,6 +1,6 @@
 https://cracolo.github.io/PortalTalentosEscolares/
 
-SITIO correspondiente a "Evaluación Formativa" Actualizado para la "Evaluación Sumativa".
+SITIO correspondiente a "Evaluación Formativa" Actualizado para la "Evaluación Sumativa" y ser presentado en Programación Web.
 
 Técnologías usadas:
 - HTML5
@@ -18,3 +18,4 @@ Técnologías usadas:
 - Faltan páginas de categorias por construir junto con las de los integrantes del equipo
 - Los personajes, sus historias y datos personales son ficticios. No se basó en ninguna persona real.
 
+Creado por Cristian Brevis Vallejos
